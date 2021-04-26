@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'category',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'shopkart.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.Account' # Need to explicitly say Django, to user custom user model
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
