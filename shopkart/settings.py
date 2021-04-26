@@ -127,3 +127,7 @@ STATIC_ROOT = BASE_DIR /'static'
 STATICFILES_DIRS = [
     'shopkart/static',
 ]
+
+# Configure media files, here we upload in category model
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
