@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+from django.urls import reverse
 
 
 class Category(models.Model):
@@ -15,6 +16,9 @@ class Category(models.Model):
         verbose_name = 'Category'
         # In admin, django appends 's' to model name. To get rid of that we can create a verbose plural name.
         verbose_name_plural = 'Categories'
+
+    def get_slug_url(self):
+        return reverse('products_by_category', args=[self.slug])
 
     def __str__(self):
         return self.category_name

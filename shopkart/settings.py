@@ -65,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # We can access menu links in all the templates, after adding this.
+                'category.context_processers.menu_links'
             ],
         },
     },
